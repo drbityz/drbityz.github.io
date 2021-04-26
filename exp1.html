@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script type="application/ecmascript">
+      function setCookies (info) {
+        document.getElementById("target1").src = "http://www.target1.com/setCookieWithThis/" + info;
+        document.getElementById("target2").src = "http://www.target2.com/setCookieWithThis/" + info;
+      }
+      function login () {
+        openIdToken = "EFSGRARTFH";
+        setCookies(openIdToken)
+      }
+    </script>
+  </head>
+  <body>
+    <img id="target1" src="" style="display:none;" />
+    <img id="target2" src="" style="display:none;" />
+    This shows up.
+  </body>
+</html>
