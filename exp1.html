@@ -1,19 +1,26 @@
 <html>
   <head>
     <script type="application/ecmascript">
-      function setCookies (info) {
-        document.getElementById("target1").src = "http://www.target1.com/setCookieWithThis/" + info;
-        document.getElementById("target2").src = "http://www.target2.com/setCookieWithThis/" + info;
+      function setCookies (commonInfoInEachCookie) {
+        document.getElementById("tg").src = "http://tg.ot.com/setCookieWithThis/" + commonInfoInEachCookie;
+        document.getElementById("ot").src = "http://dev.ot.com/setCookieWithThis/" + commonInfoInEachCookie;
+        document.getElementById("nextAcquisition").src = "http://someotherplace.com/setCookieWithThis/" + commonInfoInEachCookie;
       }
       function login () {
+        // login and get openId Token
         openIdToken = "EFSGRARTFH";
         setCookies(openIdToken)
       }
     </script>
   </head>
   <body>
-    <img id="target1" src="" style="display:none;" />
-    <img id="target2" src="" style="display:none;" />
-    This shows up.
+    <div id="invisibleWrapper"
+      <img id="ot" src="" style="display:none;" />
+      <img id="tg" src="" style="display:none;" />
+      <img id="nextAcquisition" src="" style="display:none;" />
+    </div
+    <div id="Visible">
+      Welcome - you have logged in and you have cookies on each of the target systems.
+    </div>
   </body>
 </html>
